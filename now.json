@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "alias": ["www.jamespamplin.com"],
+  "builds": [{ "src": "index.html", "use": "@now/static" }],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "https://jamespamplin.com/$1" }
+    }
+  ]
+}
